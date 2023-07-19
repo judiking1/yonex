@@ -22,3 +22,9 @@
   <br>
   2. (위 링크 실행 안될시) https://judiking1.cafe24.com/yonex
 </p>
+
+![image](https://github.com/judiking1/yonex/assets/110409369/08a01241-0a81-43d9-9c73-a423bee2d7fe)
+
+![image](https://github.com/judiking1/yonex/assets/110409369/0ccd5f15-9f89-4f7e-9107-add39dee3e22)
+
+
