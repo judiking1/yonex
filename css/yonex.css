@@ -1,0 +1,517 @@
+@charset "utf-8";
+body, html {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* Background Video */
+.vid {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -99;
+}
+.vid video {
+    object-fit: fill;
+    height: 100vh;
+    width: 100vw;
+}
+.vid button:hover i {
+    transform: scale(1.1);
+}
+.vid button {
+    position: absolute;
+    left: 7vw;
+    bottom: 2vh;
+    cursor:pointer;
+    background: none;
+    outline: none;
+    color: #fd0831;
+}
+.vid i {
+    font-size: 3vh;
+}
+.vid .doBtn {
+    left: 1vw;
+}
+.vid .reBtn{
+    left: 4vw;
+    bottom: 2.2vh;
+}
+.vid .reBtn i {
+    font-size: 2.5vh;
+}
+
+/* 우측상단 SNS */
+#sns {
+    position: fixed;
+    right: 2vw;
+    top: 4vh;
+}
+#sns li {
+    display: inline-block;
+}
+#sns li i {
+    font-size: 3vh;
+    text-shadow: 2px 2px 2px gray;
+    padding-left: 2vw;
+    opacity: 0.8;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+#sns li .fa-facebook-square {
+    color: #194fe2;
+}
+#sns li .fa-twitter-square {
+    color: #39c7ff;
+}
+#sns li .fa-instagram {
+    color: pink;
+}
+#sns li .fa-youtube-play {
+    color: red;
+}
+#sns .view {
+    color: white;
+    cursor: pointer;
+}
+#sns li .fa-desktop {
+    display: none;
+}
+/* SNS Hover 효과 */
+#sns li:hover i {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Header 왼쪽메뉴 */
+header {
+    width: 30vw;
+    height: 100vh;
+    position: fixed;
+    left: -20vw;
+    top: 0;
+    z-index: 1;
+    opacity: 0.9;
+    background: #111;
+    transform: skewX(-40deg);
+}
+header h1 {
+    /* 포지션 */
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    z-index: 1;
+    /* 로고 바로 세우기 */
+    transform: skewX(40deg);
+}
+header h1 img{
+    width: 20vw;
+}
+#gnb {
+    position: absolute;
+    right: 0;
+    top: 18vh;
+}
+/* Menu 1 Depth */
+#gnb li a {
+    display: block;
+    width: 10vw;
+    color: #fff;
+    font: bold 2vh/3 "Noto Sans KR", sans-serif;
+    text-shadow: 2px 2px 3px black;
+    text-align: center;
+}
+#gnb li:hover>a {
+    transform: scale(1.1);
+}
+#gnb li:hover .snb li a {
+    background: none;
+}
+#gnb li a em {
+    display: block;
+    transform: skewX(40deg);
+}
+#gnb .menu1 {
+    /* 2depth 위치기준값 */
+    position: relative;
+}
+/* Menu 2 Depth */
+#gnb .snb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* z-index: 1; */
+    z-index: -1;
+    /* 2depth 안보이다가 보이도록 */
+    opacity: 0;
+    transition: all 0.5s;
+}
+#gnb .snb a {
+    display: block;
+    width: 10vw;
+    height: 4vh;
+    color: #fff;
+    font: 1.6vh "Noto Sans KR", sans-serif;
+    line-height: 3.5vh;
+    border-bottom: 2px solid #21eb78;
+    margin-bottom: 3px;   
+}
+#gnb .snb li:hover a {
+    transform: scale(1.1);
+}
+
+/* 1depth를 호버하면 2depth가 나오는 효과 */
+#gnb li:hover .snb {
+    left: 10vw;
+    opacity: 0.9;
+}
+
+/* Image Text */
+.txt {
+    position: fixed;
+    right: 2vw;
+    top: 15vh;
+    z-index: 1;
+}
+.txt .p1 {
+    font-size: 8vh;
+    /* color: #fd0831; */
+    background: linear-gradient(45deg,#fd0831,#777,#fd0831);
+    
+    color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    text-align: right;
+}
+.txt .p1>em {
+    font-size: 4vh;
+    font-family: 'play', sans-serif;
+    color: #fff;
+    font-style: italic;
+}
+.txt .p2 {
+    font-size: 3vh;
+    font-family: 'Anton', sans-serif;
+    color: #fd0831;
+    letter-spacing: 1px;
+    text-align: right;
+}
+.txt .p2 >em {
+    font: bold 5vh "Anton", sans-serif;
+    background: linear-gradient(#005bac, #fd0831);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* 우측하단 호버 버튼 */
+#side {
+    width: 40vw;
+    height: 100vh;
+    background: #111;
+    position: fixed;
+    right: -40vw;
+    top: 0;
+    z-index: 1;
+    transform: skewX(-40deg);
+    opacity: 0.4;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+/* 호버시 효과 */
+#side:hover {
+    right: -25vw;
+    opacity: 0.9;
+}
+
+#side .inner {
+    width: 25vw;
+    height: 100vh;
+    background: #333;
+    position: absolute;
+    left: 7.5vw;
+    top: 0;
+    z-index: 1;
+    transition: all 1s;
+}
+/* 호버시 효과 */
+#side:hover .inner {
+    left: 3.5vw;
+}
+
+/* Image Button */
+#side .inner p {
+    width: 15vw;
+    height: 10vh;
+    position: absolute;
+    left: 3vw;
+    transform: translateX(10vw);  
+}
+#side .inner p img {
+    width: 15vw;
+    height: 8vh;
+    opacity: 0.3;
+    transition: all 0.5s;
+}
+#side .inner p img:hover {
+    opacity: 1;
+}
+
+/* Image Button 각각 위치 설정 */
+#side .inner p:nth-child(1) {
+    bottom: 31vh;
+    transition: all 0.4s;
+}
+#side .inner p:nth-child(2) {
+    bottom: 18vh;
+    transition: all 0.8s;
+}
+#side .inner p:nth-child(3) {
+    bottom: 5vh;
+    transition: all 1.2s;
+}
+#side .inner p>em {
+    display: inline-block;
+    font: bold 1.6vh/1.6 'Noto Sans KR', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 3px black;
+    transform: skewX(40deg);
+}
+
+#side:hover .inner p {
+    transform: translateX(0px);
+}
+
+/* Animation Arrow */
+#side:hover .arrBtn {
+    opacity: 0;
+}
+#side .arrBtn {
+    position: absolute;
+    left: 10vw;
+    bottom: 4vh;
+    z-index: 999;
+    transform: skewX(40deg);
+    transition: all 0.5s;
+}
+#side .arrBtn i {
+    font-size: 5vh;
+    font-weight: bold;
+    color: #fd0831;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+/* 애니메이션 효과 */
+#side .arrBtn i:nth-child(1){
+    animation: arrowAni linear 1.5s 0s infinite;
+}
+#side .arrBtn i:nth-child(2){
+    animation: arrowAni linear 1.5s 0.5s infinite;
+}
+#side .arrBtn i:nth-child(3){
+    animation: arrowAni linear 1.5s 1s infinite;
+}
+/* 애니메이션 키프레임 */
+@keyframes arrowAni {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        right: 0;
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.2);
+        right: 5vw;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .vid button {
+        position: absolute;
+        left: 12vw;
+        bottom: 2vh;
+        cursor:pointer;
+        background: none;
+        outline: none;
+        color: #fd0831;
+    }
+    .vid i {
+        font-size: 3vh;
+    }
+    .vid .doBtn {
+        left: 2vw;
+    }
+    .vid .reBtn{
+        left: 7vw;
+        bottom: 2.2vh;
+    }
+    .vid .reBtn i {
+        font-size: 2.5vh;
+    }
+    /* sns */
+    #sns {
+        position: fixed;
+        right: 2vw;
+        top: 95vh;
+        z-index: 2;
+    }
+    #sns li {
+        display: inline;
+    }
+    #sns li i {
+        font-size: 3vh;
+        padding-left: 1.5vw;
+    }
+    #sns .tab a .fa-tablet {
+        display: none;
+    }
+    #sns li .fa-desktop {
+        display: inline-block;
+    }
+    #side {
+        display: none;
+    }
+
+    /* header */
+    header {
+        width: 100vw;
+        height: 10vh;
+        left: 0;
+        top: 0;
+        background: #000;
+        transform: none;
+        display: flex;
+    }
+
+    header h1 {
+        position: absolute;
+        left: 2vw;
+        top: 1vh;
+        transform: none;
+    }
+    header h1 img{
+        width: 25vw;
+        top: 0;
+        transform: translateY(1vh);
+    }
+    #gnb {
+        left: 28vw;
+        top: 2vh;
+        display: flex;
+    }
+
+    /* Menu 1 Depth */
+    #gnb li a {
+        display: block;
+        width: 10vw;
+        color: #fff;
+        font: bold 2vh/3 "Noto Sans KR", sans-serif;
+        text-shadow: none;
+        text-align: center;
+    }
+    #gnb>li {
+        margin-left: 3vw;
+        z-index: 3;
+    }
+    #gnb li:hover a {
+        border: none;
+        border-bottom: 1px solid #fff;
+    }
+    #gnb li:hover .snb li a {
+        background: none;
+    }
+    #gnb li a em {
+        transform: none;
+        font-style: normal;
+        background: none;
+    }
+    #gnb .menu1 {
+        position: relative;
+    }
+
+    /* Menu 2 Depth */
+    #gnb .snb {
+        position: absolute;
+        left: 0;
+        transform: translateX(-1vw);
+        top: 0;
+        bottom: 0;
+    }
+    #gnb .snb a {
+        display: block;
+        width: 12vw;
+        height: 4vh;
+        color: #fff;
+        font: 1.6vh "Noto Sans KR", sans-serif;
+        line-height: 4vh;
+        border: none;
+        margin-bottom: 3px;   
+    }
+    #gnb .snb li:hover a {
+        transform: scale(1.1);
+    }
+    /* 1depth를 호버하면 2depth가 나오는 효과 */
+    #gnb>li:hover .snb {
+        left: 0;
+        top: 8vh;
+        opacity: 0.9;
+        z-index: 2;
+    }
+
+    /* Image Text */
+    .txt {
+        position: fixed;
+        right: 2vw;
+        top: 75vh;
+        z-index: 1;
+    }
+}
+/*  */
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+    }
+    #gnb {
+        left: 26vw;
+        top: 2vh;
+        display: flex;
+        justify-content: space-around;
+    }
+    /* 기존의 gnb 메뉴를 숨기기 위해 display: none; 설정 */
+    #gnb>li:nth-child(3){
+        display: none;
+    }
+    #gnb li a {
+        display: block;
+        width: 10vw;
+        color: #fff;
+        font: bold 1.6vh/5vh "Noto Sans KR", sans-serif;
+        text-shadow: none;
+        text-align: center;
+    }
+    #gnb .snb {
+        position: absolute;
+        left: 0;
+        transform: translateX(-2vw);
+        top: 0;
+        bottom: 0;
+    }
+    #gnb .snb a {
+        display: block;
+        width: 14vw;
+        height: 5vh;
+        color: #fff;
+        font: 1.4vh/4vh "Noto Sans KR", sans-serif;
+        border: none;
+        margin-bottom: 5px;   
+    }
+}
